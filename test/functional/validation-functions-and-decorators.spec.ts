@@ -932,13 +932,13 @@ describe('IsEnum', () => {
 
   it('should return error object with proper data', () => {
     const validationType = 'isEnum';
-    const message = 'someProperty must be a valid enum value';
+    const message = 'someProperty must be a valid enum value. Accepted values: 1, 999';
     return checkReturnedError(new MyClass(), invalidValues, validationType, message);
   });
 
   it('should return error object with proper data (string enum)', () => {
     const validationType = 'isEnum';
-    const message = 'someProperty must be a valid enum value';
+    const message = 'someProperty must be a valid enum value. Accepted values: first, second';
     return checkReturnedError(new MyClass2(), invalidValues, validationType, message);
   });
 });
